@@ -1,0 +1,19 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flip-base-animation($transform-origin, $content, $animation) {
+  position: absolute;
+  width: 62%;
+  content: $content;
+  transform-origin: $transform-origin;
+  animation: $animation;
+}
+
+@mixin small {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
